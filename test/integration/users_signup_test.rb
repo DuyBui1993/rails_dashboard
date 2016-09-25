@@ -18,7 +18,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
     assert_select 'div.field_with_errors'
   end
-
   test "valid signup information" do
     get signup_path
     assert_difference 'User.count' do
